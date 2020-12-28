@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # 3rd party
     'rest_framework',
-
+    'django_celery_beat',
     # local
     'api.apps.ApiConfig',
 ]
@@ -105,6 +105,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_BEAT_SCHEDULE = {
+    'data_retrieving': {
+       'task': 'data',
+       'schedule': 3600.0
+    },
+    'update_objects': { 
+         'task': 'update', 
+       'schedule': 3600.0
+        },       
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
