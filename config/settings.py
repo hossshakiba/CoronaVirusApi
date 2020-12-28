@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     # 3rd party
     'rest_framework',
-    'django_celery_beat',
     # local
     'api.apps.ApiConfig',
 ]
