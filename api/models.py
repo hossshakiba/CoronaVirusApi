@@ -12,7 +12,7 @@ class CoronaVirus(models.Model):
     total_tests         = models.CharField(max_length=50, default='')
     population          = models.CharField(max_length=50, default='')
     continent           = models.CharField(max_length=50, default='')
-    slug                = models.SlugField(blank= True, unique= True)
+    slug                = models.SlugField(blank= True)
     
     class Meta:
         verbose_name = "coronavirus"

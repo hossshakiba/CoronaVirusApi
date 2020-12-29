@@ -5,8 +5,10 @@ from .serializers import CoronaVirusModelSerializer
 
 class CoronaVirusListAPIView(generics.ListAPIView):
     
-    queryset = CoronaVirus.objects.all()
+    queryset         = CoronaVirus.objects.all()
     serializer_class = CoronaVirusModelSerializer
+    search_fields    = ['country', 'continent']
+    ordering_fields  = ['total_cases',]
 
 class CoronaVirusDetailAPIView(generics.RetrieveAPIView):
     

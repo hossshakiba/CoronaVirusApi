@@ -29,6 +29,7 @@ def get_statistics():
 
 @app.task(name='update')
 def corona_virus_update():
+    
     objects = CoronaVirus.objects.all()
     info = get_statistics()
     if objects.count() == 0:

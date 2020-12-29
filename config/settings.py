@@ -105,15 +105,24 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'rest_framework.filters.SearchFilter',
+        #'rest_framework.filters.OrderingFilter',
+    ),
+    'SEARCH_PARAM': 'q',
+    #'ORDERING_PARAM': 'ordering'
+}
+
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_BEAT_SCHEDULE = {
     'data_retrieving': {
        'task': 'data',
-       'schedule': 3600.0
+       'schedule': 60.0
     },
     'update_objects': { 
          'task': 'update', 
-       'schedule': 3600.0
+       'schedule': 60.0
         },       
 }
 
