@@ -11,16 +11,16 @@
 - Population 🏘️
 - Continent 🗺️
 
-Information based on https://www.worldmeters.com, get updated every minute.
+Information based on https://www.worldmeters.com, get updated every hour(simply modifiable).
 
 # List-view
-If you want to get all the *json-formatted* information of the whole world and all other 220 countries, the url would be ``http://127.0.0.1:8000/api`` on your **localhost**.
+If you want to get all the *json-formatted* information of the whole world and all other 220 countries, endpoint is ``api``. e.g. the url would be ``http://127.0.0.1:8000/api`` on your **localhost**.
 
 # A specific country?
 If you want to retrieve information of a desired country, you just need to get to this url format : ``http://127.0.0.1:8000/api/{country}``. e.g. ``http://127.0.0.1:8000/api/iran``.
 
 ---
-**NOTE**
+**NOTE !**
 
 country should be in **lower-case** format and countries with more than 1 part, like Saudi Arabia, will be accessed at ``http://127.0.0.1:8000/api/saudi-arabia``.
 
