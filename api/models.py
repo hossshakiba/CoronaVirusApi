@@ -2,16 +2,16 @@ from django.db import models
 
 class CoronaVirus(models.Model):
 
-    country             = models.CharField(max_length=50, default='')
-    total_cases         = models.CharField(max_length=50, default='')
-    new_cases           = models.CharField(max_length=50, default='')
-    total_deaths        = models.CharField(max_length=50, default='')
-    new_deaths          = models.CharField(max_length=50, default='')
-    total_recovered     = models.CharField(max_length=50, default='')
-    active_cases        = models.CharField(max_length=50, default='')
-    total_tests         = models.CharField(max_length=50, default='')
-    population          = models.CharField(max_length=50, default='')
-    continent           = models.CharField(max_length=50, default='')
+    country             = models.CharField(max_length=50)
+    total_cases         = models.CharField(max_length=50)
+    new_cases           = models.CharField(max_length=50)
+    total_deaths        = models.CharField(max_length=50)
+    new_deaths          = models.CharField(max_length=50)
+    total_recovered     = models.CharField(max_length=50)
+    active_cases        = models.CharField(max_length=50)
+    total_tests         = models.CharField(max_length=50)
+    population          = models.CharField(max_length=50)
+    continent           = models.CharField(max_length=50)
     slug                = models.SlugField(blank= True)
     
     class Meta:

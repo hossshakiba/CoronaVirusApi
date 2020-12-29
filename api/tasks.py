@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 import sys
 
 app = Celery()
-
 sys.dont_write_bytecode = True
+
 
 info = []
 indices = [2,3,4,5,6,7,9,13,15,16]
