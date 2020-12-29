@@ -9,6 +9,7 @@ class CoronaVirusListAPIView(generics.ListAPIView):
         'total_cases': 'CAST(REPLACE(total_cases, ",","") AS INT)',
         'total_deaths': 'CAST(REPLACE(total_deaths, ",","") AS INT)',
         'total_recovered': 'CAST(REPLACE(total_recovered, ",","") AS INT)',})
+    
     serializer_class = CoronaVirusModelSerializer
     search_fields    = ['country', 'continent']
     ordering_fields  = ['total_cases', 'total_deaths', 'total_recovered']
